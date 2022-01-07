@@ -160,6 +160,10 @@ message Limit {
 	// Limit the result to be returned.
 	optional uint64 limit = 1 [(gogoproto.nullable) = false];
 	optional Executor child = 2;
+	// add by jiyf
+	repeated Expr conditions = 3;
+	repeated RpnExpr rpn_conditions = 4;
+	repeated ColumnInfo columns = 5;
 }
 
 message Kill {
