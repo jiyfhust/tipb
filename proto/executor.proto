@@ -164,8 +164,8 @@ message Limit {
 	repeated Expr conditions = 3;
 	repeated RpnExpr rpn_conditions = 4;
 	repeated ColumnInfo columns = 5;
-	optional bool tableCondCoveredByPreIndex = 6 [(gogoproto.nullable) = false];
-	optional uint64 prefIndexOffset = 7 [(gogoproto.nullable) = false];
+	optional bool CoveredPreIndex = 6 [(gogoproto.nullable) = false];
+	optional uint64 CoveredCount = 7 [(gogoproto.nullable) = false];
 }
 
 message Kill {
