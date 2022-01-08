@@ -164,6 +164,8 @@ message Limit {
 	repeated Expr conditions = 3;
 	repeated RpnExpr rpn_conditions = 4;
 	repeated ColumnInfo columns = 5;
+	optional bool tableCondCoveredByPreIndex = 6;
+	optional uint64 prefIndexOffset = 7;
 }
 
 message Kill {
